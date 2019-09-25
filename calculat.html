@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		button{
+			margin-left: 25px;
+			width:40px;
+			height: 30px;
+		}
+		input{
+			width:300px;
+			height: 40px;
+		}
+		fieldset{
+			width:300px;
+		}
+</style>
+</head>
+<body>
+	<fieldset>
+	<input type="text" readonly id="output" size="35">
+		<br><br>
+		<tr>
+		<button onclick="display('1')"><b>1</b></button>
+		<button onclick="display('2')"><b>2</b></button>
+		<button onclick="display('3')"><b>3</b></button>
+		<button onclick="display('+')"><b>+</b></button>
+		<br><br></tr>
+		<tr>
+		<button onclick="display('4')"><b>4</b></button>
+		<button onclick="display('5')"><b>5</b></button>
+		<button onclick="display('6')"><b>6</b></button>
+		<button onclick="display('-')"><b>-</b></button>
+		<br><br></tr>
+		<tr>
+		<button onclick="display('7')"><b>7</b></button>
+		<button onclick="display('8')"><b>8</b></button>
+		<button onclick="display('9')"><b>9</b></button>
+		<button onclick="display('*')"><b>*</b></button>
+		<br><br></tr>
+		<tr>
+		<button onclick="display('0')"><b>0</b></button>
+		<button onclick="display('/')"><b>/</b></button>
+		<button id="result"onclick="result()"><b>=</b></button>
+		<button id="click" onclick="cleardisplay()"><b>c</b></button>
+
+	</tr>
+</fieldset>
+<script type="text/javascript">
+	function display(val){
+		document.getElementById('output').value += val;
+
+		}
+	function result(){
+    const value=document.getElementById('output').value;
+    const result=eval(value);
+    document.getElementById('output').value=result;
+
+	}
+		function cleardisplay(){
+			document.getElementById('output').value='';
+
+		   }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+	
